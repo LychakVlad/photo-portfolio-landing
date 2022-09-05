@@ -449,12 +449,12 @@ body {
 
   .header_icon._active::before {
     top: 50%;
-    transform: rotate(-45deg) translate(0px, -50%);
+    transform: rotate(-45deg);
   }
 
   .header_icon._active::after {
-    bottom: 50%;
-    transform: rotate(45deg) translate(0px, 50%);
+    bottom: 32%;
+    transform: rotate(45deg);
   }
 
   .header_list {
