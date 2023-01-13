@@ -52,7 +52,7 @@ export const scss = () => {
 
 
         //Если нужен не сжатый дубль файла
-        .pipe(app.gulp.dest(app.path.build.css))
+        .pipe(app.gulp.dest(app.path.docs.css))
 
         .pipe(
             app.plugins.if(
@@ -62,6 +62,6 @@ export const scss = () => {
         .pipe(rename({
             extname: ".min.css"
         }))
-        .pipe(app.gulp.dest(app.path.build.css))
+        .pipe(app.gulp.dest(app.path.docs.css))
         .pipe(app.plugins.browsersync.stream());
 }

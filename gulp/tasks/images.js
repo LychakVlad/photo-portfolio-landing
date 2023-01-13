@@ -10,7 +10,7 @@ export const images = () => {
                 title: "IMAGES",
                 message: "Error: <%= error.message %>"
             })))
-        .pipe(app.plugins.newer(app.path.build.images))
+        .pipe(app.plugins.newer(app.path.docs.images))
 
         .pipe(
             app.plugins.if(
@@ -22,7 +22,7 @@ export const images = () => {
         .pipe(
             app.plugins.if(
                 app.isBuild,
-                app.gulp.dest(app.path.build.images)
+                app.gulp.dest(app.path.docs.images)
             )
         )
 
@@ -36,7 +36,7 @@ export const images = () => {
         .pipe(
             app.plugins.if(
                 app.isBuild,
-                app.plugins.newer(app.path.build.images)
+                app.plugins.newer(app.path.docs.images)
             )
         )
 
@@ -52,8 +52,8 @@ export const images = () => {
                 }))
         )
 
-        .pipe(app.gulp.dest(app.path.build.images))
+        .pipe(app.gulp.dest(app.path.docs.images))
         .pipe(app.gulp.src(app.path.src.svg))
-        .pipe(app.gulp.dest(app.path.build.images))
+        .pipe(app.gulp.dest(app.path.docs.images))
         .pipe(app.plugins.browsersync.stream());
 }

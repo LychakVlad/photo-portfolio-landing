@@ -14,6 +14,6 @@ export const js = () => {
                     filename: 'app.min.js',
                 }
             }))
-            .pipe(app.gulp.dest(app.path.build.js))
+            .pipe(app.gulp.dest(app.path.docs.js))
             .pipe(app.plugins.browsersync.stream());
     }
